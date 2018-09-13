@@ -4,12 +4,13 @@ public class FastSort3Demo {
 
     public static void main(String[] args) {
         int a[] = {99,4,3,4,8,7,6,5};
+        print(a);
         quickSort(a, 0, a.length - 1);
         print(a);
     }
 
     static void quickSort(int array[], int begin, int end) {
-        System.out.println("begin:"+begin+"----end:"+end);
+        //System.out.println("begin:"+begin+"----end:"+end);
         if (begin < end) {
             int i = begin;
             int j = end;
@@ -32,6 +33,7 @@ public class FastSort3Demo {
                 }
             }
             array[i] = x;
+            print(array);
 
             quickSort(array, begin, i - 1);
             quickSort(array, i + 1, end);

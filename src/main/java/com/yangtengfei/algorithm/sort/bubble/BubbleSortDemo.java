@@ -3,8 +3,8 @@ package com.yangtengfei.algorithm.sort.bubble;
 public class BubbleSortDemo {
 
     public static void main(String[] args) {
-        int array[] ={1,4,5,6,1,23,4,5};
-        descSort(array);
+        int array[] ={5,4,3,2,1};
+        ascSort(array);
         for(int i=0; i<array.length; i++){
             System.out.print(array[i]+"\t");
         }
@@ -22,6 +22,7 @@ public class BubbleSortDemo {
                     exchage = true;
                 }
             }
+            printArray(array);
         }
     }
 
@@ -37,6 +38,15 @@ public class BubbleSortDemo {
                     exchage = true;
                 }
             }
+            printArray(array);
         }
+    }
+
+
+    private static void printArray(int[] source) {
+        for (int i = 0; i < source.length; i++) {
+            System.out.print("\t" + source[i]);
+        }
+        System.out.println();
     }
 }
